@@ -1,8 +1,13 @@
 import React from "react";
-import { HeaderTitle } from "../HeaderElements";
+import { HeaderTitle, TitleContainer } from "../HeaderElements";
+import Logo from "../../../images/logo.svg";
 
 const Title = () => {
-  return <HeaderTitle>sneakers</HeaderTitle>;
+  return (
+    <TitleContainer>
+      <HeaderTitle src={Logo} />
+    </TitleContainer>
+  );
 };
 
 export default Title;

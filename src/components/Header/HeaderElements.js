@@ -9,12 +9,20 @@ export const HeaderContainer = styled.div`
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 `;
 
-export const HeaderTitle = styled.h1`
-  font-weight: 700;
+export const TitleContainer = styled.div`
+  height: 100%;
+  width: 80%;
+  min-width: 100px;
+`;
+
+export const HeaderTitle = styled.img`
+  /* height: 100%; */
   height: 100%;
   width: 100%;
-  display: grid;
-  align-content: center;
+  /* width: 150px; */
+  min-width: 100px;
+
+  object-fit: contain;
 `;
 
 export const NavContainer = styled.ul`
@@ -25,6 +33,13 @@ export const NavContainer = styled.ul`
   justify-content: space-between;
   align-items: center;
   color: ${({ theme }) => theme.colors.neutral.darkGrayishBlue};
+  @media (max-width: 1000px) {
+    width: 70%;
+  }
+  @media (max-width: 700px) {
+    width: 90%;
+    margin: 0 2vw;
+  }
 `;
 export const NavElement = styled.li``;
 
