@@ -27,3 +27,9 @@ export const NavContainer = styled.ul`
   color: ${({ theme }) => theme.colors.neutral.darkGrayishBlue};
 `;
 export const NavElement = styled.li``;
+
+export const IconsContainer = styled.div`
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr;
+`;
