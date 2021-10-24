@@ -6,12 +6,15 @@
 }
 .image-gallery-thumbnail.active,
 .image-gallery-thumbnail:focus {
-  border-radius: 15px;
+  border-radius: 10px;
+}
+.image-gallery img {
+  border-radius: 6.5px;
 }
 
 .image-gallery-thumbnail,
 .image-gallery-thumbnail {
-  border-radius: 15px;
+  border-radius: 10px;
 }
 
 .image-gallery-slide .image-gallery-image {
