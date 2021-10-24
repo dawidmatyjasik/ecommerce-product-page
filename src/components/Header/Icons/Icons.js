@@ -1,10 +1,13 @@
 import React from "react";
-import { IconsContainer } from "../HeaderElements";
+import { Icon, IconsContainer } from "../HeaderElements";
+import Avatar from "../../../images/image-avatar.png";
+import Cart from "../../../images/icon-cart.svg";
 
 const Icons = () => {
   return (
     <IconsContainer>
-      <h1>Icon</h1>
+      <Icon src={Cart} />
+      <Icon src={Avatar} />
     </IconsContainer>
   );
 };

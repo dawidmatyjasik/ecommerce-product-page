@@ -4,7 +4,7 @@ export const HeaderContainer = styled.div`
   height: 100%;
   width: 100%;
   display: grid;
-  grid-template-columns: 2fr 8fr 2fr;
+  grid-template-columns: 4fr 16fr 3fr;
   grid-template-rows: 1fr;
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 `;
@@ -16,12 +16,9 @@ export const TitleContainer = styled.div`
 `;
 
 export const HeaderTitle = styled.img`
-  /* height: 100%; */
   height: 100%;
   width: 100%;
-  /* width: 150px; */
   min-width: 100px;
-
   object-fit: contain;
 `;
 
@@ -44,7 +41,18 @@ export const NavContainer = styled.ul`
 export const NavElement = styled.li``;
 
 export const IconsContainer = styled.div`
-  display: grid;
-  grid-template-rows: 1fr 1fr;
-  grid-template-columns: 1fr;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+`;
+
+export const Icon = styled.img`
+  object-fit: contain;
+  height: 45%;
+  width: 100%;
+  min-width: 55px;
+  &:nth-child(1) {
+    height: 20%;
+    min-width: 25px;
+  }
 `;
