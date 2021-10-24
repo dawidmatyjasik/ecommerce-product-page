@@ -23,7 +23,7 @@ export const DescriptionContainer = styled.div`
   align-items: center;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 3fr 3fr 1fr 1fr 1fr;
-  padding: calc(5vw + 5%) 3vw;
+  padding: calc(5vw) 3vw;
   width: 80%;
   height: 80%;
 
@@ -87,4 +87,57 @@ export const DescSell = styled.h4`
     font-size: 0.9rem;
   }
 `;
-export const DescMenu = styled.div``;
+export const MenuContainer = styled.div`
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+  grid-template-rows: 1fr;
+`;
+export const MenuCounter = styled.div`
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  background-color: ${({ theme }) => theme.colors.neutral.lightGrayishBlue};
+`;
+export const MenuButton = styled.button`
+  outline: none;
+  border: none;
+  background-color: inherit;
+  color: ${({ theme }) => theme.colors.primary.orange};
+  font-weight: bold;
+  font-size: 1.5rem;
+  cursor: pointer;
+  border-radius: 10px;
+`;
+export const MenuSpan = styled.span`
+  display: grid;
+  place-items: center;
+  font-size: 1rem;
+`;
+
+export const MenuCart = styled.button`
+  outline: none;
+  border: none;
+  background-color: ${({ theme }) => theme.colors.primary.orange};
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  color: white;
+  margin-left: 10px;
+  border-radius: 10px;
+  & svg {
+    color: white;
+  }
+`;
+export const MenuCartSpan = styled.span`
+  margin-left: 10px;
+`;
+
+export const Icon = styled.img`
+  object-fit: contain;
+  fill: white;
+  /* height: 50%; */
+  /* width: 50%; */
+`;

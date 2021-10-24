@@ -2,13 +2,13 @@ import React from "react";
 import {
   DescCompany,
   DescInfo,
-  DescMenu,
   DescPrice,
   DescPriceDiscount,
   DescriptionContainer,
   DescSell,
   DescTitle,
 } from "../ContentElements";
+import Menu from "./Menu/Menu";
 
 const Description = () => {
   return (
@@ -26,7 +26,7 @@ const Description = () => {
       <DescSell>
         <s>$250.00</s>
       </DescSell>
-      <DescMenu></DescMenu>
+      <Menu />
     </DescriptionContainer>
   );
 };
