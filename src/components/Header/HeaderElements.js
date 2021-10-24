@@ -6,6 +6,7 @@ export const HeaderContainer = styled.div`
   display: grid;
   grid-template-columns: 2fr 8fr 2fr;
   grid-template-rows: 1fr;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 `;
 
 export const HeaderTitle = styled.h1`
@@ -13,17 +14,16 @@ export const HeaderTitle = styled.h1`
   height: 100%;
   width: 100%;
   display: grid;
-  place-items: center;
-  /* justify-content: center; */
+  align-content: center;
 `;
 
 export const NavContainer = styled.ul`
   width: 50%;
-  /* padding: 0 5vw; */
   height: 100%;
   list-style-type: none;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
+  color: ${({ theme }) => theme.colors.neutral.darkGrayishBlue};
 `;
 export const NavElement = styled.li``;
