@@ -61,10 +61,25 @@ export const DescInfo = styled.p`
 export const DescPrice = styled.h2`
   font-weight: bold;
   font-size: 2rem;
+  display: flex;
+  align-items: center;
   @media (max-width: 768px) {
     font-size: 1.5rem;
   }
 `;
+
+export const DescPriceDiscount = styled.span`
+  margin-left: 2vw;
+  font-size: 1rem;
+  background-color: ${({ theme }) => theme.colors.primary.paleOrange};
+  color: ${({ theme }) => theme.colors.primary.orange};
+  padding: 5px 10px;
+  border-radius: 5px;
+  @media (max-width: 768px) {
+    font-size: 0.75rem;
+  }
+`;
+
 export const DescSell = styled.h4`
   color: ${({ theme }) => theme.colors.neutral.grayishBlue};
   font-size: 1rem;

@@ -4,6 +4,7 @@ import {
   DescInfo,
   DescMenu,
   DescPrice,
+  DescPriceDiscount,
   DescriptionContainer,
   DescSell,
   DescTitle,
@@ -19,7 +20,9 @@ const Description = () => {
         Featuring a durable rubber outer sole, they'll withstand everything the
         weather can offer
       </DescInfo>
-      <DescPrice>$125.00</DescPrice>
+      <DescPrice>
+        $125.00 <DescPriceDiscount>50%</DescPriceDiscount>
+      </DescPrice>
       <DescSell>
         <s>$250.00</s>
       </DescSell>
