@@ -1,10 +1,12 @@
 import React from "react";
+import Header from "../components/Header/Header";
 import { PageContainer } from "./PageElements";
 
 const Page = () => {
   return (
     <PageContainer>
-      <h1>Test</h1>
+      <Header />
+      <div></div>
     </PageContainer>
   );
 };
