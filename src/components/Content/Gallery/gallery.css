@@ -1,0 +1,79 @@
+@import "~react-image-gallery/styles/css/image-gallery.css";
+.image-gallery-thumbnails-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+}
+.image-gallery-thumbnail.active,
+.image-gallery-thumbnail:focus {
+  border-radius: 15px;
+}
+
+.image-gallery-thumbnail,
+.image-gallery-thumbnail {
+  border-radius: 15px;
+}
+
+.image-gallery-slide .image-gallery-image {
+  object-fit: contain;
+}
+/* .image-gallery {
+  height: 50%;
+}
+.image-gallery-content {
+  height: 100%;
+}
+.image-gallery-slide-wrapper {
+  height: 100%;
+}
+
+.image-gallery-swipe {
+  height: 100%;
+}
+
+.image-gallery-slides {
+  height: 100%;
+}
+.image-gallery-slide {
+  height: 100%;
+}
+.image-gallery-image {
+  height: 100%;
+}
+
+.image-gallery-thumbnails-wrapper {
+  height: 25%;
+}
+.image-gallery-thumbnails {
+  height: 100%;
+}
+.image-gallery-thumbnails-container {
+  height: 100%;
+}
+.image-gallery-thumbnail {
+  height: 100%;
+}
+.image-gallery-thumbnail-inner {
+  height: 100%;
+} */
+.image-gallery-thumbnail-image {
+  height: 100%;
+  object-fit: contain;
+}
+
+.image-gallery-thumbnail.active,
+.image-gallery-thumbnail:focus {
+  border: 3px solid hsl(26, 100%, 55%);
+}
+
+.image-gallery-thumbnail:hover {
+  border: 3px solid hsl(26, 100%, 55%);
+}
+
+.image-gallery-thumbnail {
+  opacity: 0.5;
+}
+
+.active {
+  opacity: 1;
+}

@@ -1,10 +1,12 @@
 import React from "react";
 import { ContentContainer } from "./ContentElements";
+import Gallery from "./Gallery/Gallery";
 
 const Content = () => {
   return (
     <ContentContainer>
-      <h1>Test</h1>
+      <Gallery />
+      <div></div>
     </ContentContainer>
   );
 };
