@@ -6,12 +6,19 @@ export const ContentContainer = styled.div`
   display: grid;
   grid-template-columns: 2fr 3fr;
   grid-template-rows: 1fr;
+  @media (max-width: 600px) {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
 `;
 
 export const GalleryContainer = styled.div`
   width: 100%;
   height: 100%;
   padding: 5vw 3vw;
+  @media (max-width: 600px) {
+    padding: 0;
+  }
   /*  & img {
     border-radius: 10px;
   } */
@@ -26,12 +33,11 @@ export const DescriptionContainer = styled.div`
   padding: calc(5vw) 3vw;
   width: 80%;
   height: 80%;
-
-  @media (max-width: 768px) {
-    height: 60%;
-  }
   @media (max-width: 1050px) {
     width: 100%;
+  }
+  @media (max-width: 768px) {
+    height: 60%;
   }
 `;
 

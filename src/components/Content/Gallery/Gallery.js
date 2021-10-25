@@ -10,6 +10,7 @@ import img1thumbnail from "../../../images/image-product-1-thumbnail.jpg";
 import img2thumbnail from "../../../images/image-product-2-thumbnail.jpg";
 import img3thumbnail from "../../../images/image-product-3-thumbnail.jpg";
 import img4thumbnail from "../../../images/image-product-4-thumbnail.jpg";
+import { useWindowSize } from "@react-hook/window-size/throttled";
 
 const images = [
   {
@@ -31,13 +32,17 @@ const images = [
 ];
 
 const Gallery = () => {
+  const [width, height] = useWindowSize({ fps: 60 });
+  console.log(width);
+
   return (
     <GalleryContainer>
       <ImageGallery
         items={images}
         showPlayButton={false}
         showFullscreenButton={false}
-        showNav={false}
+        showNav={width > 600 ? false : true}
+        showThumbnails={width > 600 ? true : false}
       />
     </GalleryContainer>
   );
