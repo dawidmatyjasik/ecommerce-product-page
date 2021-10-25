@@ -8,8 +8,9 @@ import Title from "./Title/Title";
 const Header = () => {
   return (
     <HeaderContainer>
-      <Title />
       <Menu />
+
+      <Title />
       <Nav />
       <Icons />
     </HeaderContainer>

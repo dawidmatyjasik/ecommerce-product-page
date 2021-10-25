@@ -9,6 +9,7 @@ export const HeaderContainer = styled.div`
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
   @media (max-width: 600px) {
     grid-template-columns: 1fr 6fr 2fr;
+    place-items: center;
   }
 `;
 
@@ -23,6 +24,9 @@ export const HeaderTitle = styled.img`
   width: 100%;
   min-width: 100px;
   object-fit: contain;
+  @media (max-width: 600px) {
+    width: 50%;
+  }
 `;
 
 export const NavContainer = styled.ul`
@@ -61,9 +65,19 @@ export const Icon = styled.img`
     height: 20%;
     min-width: 25px;
   }
+  @media (max-width: 600px) {
+    width: 1.5rem;
+    height: 1.5rem;
+    &:nth-child(1) {
+      height: inherit;
+      min-width: inherit;
+    }
+  }
 `;
 
 export const MenuContainer = styled.div`
+  display: grid;
+  place-items: center;
   @media (min-width: 600px) {
     display: none;
   }
