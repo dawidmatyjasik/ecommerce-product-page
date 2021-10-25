@@ -1,6 +1,5 @@
 import React from "react";
 import {
-  Icon,
   MenuButton,
   MenuCart,
   MenuCartSpan,
@@ -8,7 +7,6 @@ import {
   MenuCounter,
   MenuSpan,
 } from "../../ContentElements";
-// import CartIcon from "../../../../images/icon-cart.svg";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 
 const Menu = () => {

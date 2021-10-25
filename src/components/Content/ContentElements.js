@@ -99,6 +99,7 @@ export const MenuCounter = styled.div`
   grid-template-rows: 1fr;
   grid-template-columns: 1fr 1fr 1fr;
   background-color: ${({ theme }) => theme.colors.neutral.lightGrayishBlue};
+  border-radius: 10px;
 `;
 export const MenuButton = styled.button`
   outline: none;
