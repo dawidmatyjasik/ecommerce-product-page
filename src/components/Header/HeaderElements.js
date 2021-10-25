@@ -7,6 +7,9 @@ export const HeaderContainer = styled.div`
   grid-template-columns: 4fr 16fr 3fr;
   grid-template-rows: 1fr;
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  @media (max-width: 600px) {
+    grid-template-columns: 1fr 6fr 2fr;
+  }
 `;
 
 export const TitleContainer = styled.div`
@@ -37,6 +40,9 @@ export const NavContainer = styled.ul`
     width: 90%;
     margin: 0 2vw;
   }
+  @media (max-width: 600px) {
+    display: none;
+  }
 `;
 export const NavElement = styled.li``;
 
@@ -54,5 +60,11 @@ export const Icon = styled.img`
   &:nth-child(1) {
     height: 20%;
     min-width: 25px;
+  }
+`;
+
+export const MenuContainer = styled.div`
+  @media (min-width: 600px) {
+    display: none;
   }
 `;
