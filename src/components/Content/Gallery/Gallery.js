@@ -32,8 +32,7 @@ const images = [
 ];
 
 const Gallery = () => {
-  const [width, height] = useWindowSize({ fps: 60 });
-  console.log(width);
+  const [width, height] = useWindowSize();
 
   return (
     <GalleryContainer>

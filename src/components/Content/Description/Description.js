@@ -1,3 +1,4 @@
+import { useWindowSize } from "@react-hook/window-size/throttled";
 import React from "react";
 import {
   DescCompany,
@@ -11,6 +12,7 @@ import {
 import Menu from "./Menu/Menu";
 
 const Description = () => {
+  const [width, height] = useWindowSize();
   return (
     <DescriptionContainer>
       <DescCompany>sneaker company</DescCompany>
@@ -20,12 +22,32 @@ const Description = () => {
         Featuring a durable rubber outer sole, they'll withstand everything the
         weather can offer
       </DescInfo>
-      <DescPrice>
-        $125.00 <DescPriceDiscount>50%</DescPriceDiscount>
-      </DescPrice>
-      <DescSell>
-        <s>$250.00</s>
-      </DescSell>
+      {width > 600 ? (
+        <>
+          <DescPrice>
+            $125.00 <DescPriceDiscount>50%</DescPriceDiscount>
+          </DescPrice>
+          <DescSell>
+            <s>$250.00</s>
+          </DescSell>
+        </>
+      ) : (
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "space-between",
+            alignItems: "center",
+          }}
+        >
+          <DescPrice>
+            $125.00 <DescPriceDiscount>50%</DescPriceDiscount>
+          </DescPrice>
+          <DescSell>
+            <s>$250.00</s>
+          </DescSell>
+        </div>
+      )}
+
       <Menu />
     </DescriptionContainer>
   );
