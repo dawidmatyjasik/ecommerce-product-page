@@ -4,8 +4,6 @@ import { GlobalStyle } from "./theme/globalStyles";
 import { theme } from "./theme/theme";
 
 function App() {
-  console.log(theme);
-
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyle />
