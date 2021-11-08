@@ -32,31 +32,32 @@
     max-height: none;
   }
   .image-gallery {
-    height: 45vh;
+    height: 35vh;
   }
   .image-gallery-image {
-    height: 45vh;
+    height: 35vh;
     /* height: 100%; */
+    object-position: center top;
     width: 100vw;
     object-fit: cover;
   }
   .image-gallery-content {
-    height: 45vh;
+    height: 35vh;
     /* width: 100%; */
   }
   .image-gallery-slide {
-    height: 45vh;
+    height: 35vh;
   }
   .image-gallery-slide-wrapper {
-    height: 45vh;
+    height: 35vh;
     width: 100%;
   }
   .image-gallery-swipe {
-    height: 45vh;
+    height: 35vh;
     width: 100%;
   }
   .image-gallery-slides {
-    height: 45vh;
+    height: 35vh;
     width: 100%;
   }
 }
