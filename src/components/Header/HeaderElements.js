@@ -1,12 +1,17 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 
 export const HeaderContainer = styled.div`
   height: 100%;
   width: 100%;
+  min-height: 11.5vh;
   display: grid;
   grid-template-columns: 4fr 16fr 3fr;
   grid-template-rows: 1fr;
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  @media (max-width: 600px) {
+    grid-template-columns: 1fr 6fr 2fr;
+    place-items: center;
+  }
 `;
 
 export const TitleContainer = styled.div`
@@ -20,6 +25,10 @@ export const HeaderTitle = styled.img`
   width: 100%;
   min-width: 100px;
   object-fit: contain;
+  cursor: pointer;
+  @media (max-width: 600px) {
+    width: 50%;
+  }
 `;
 
 export const NavContainer = styled.ul`
@@ -37,8 +46,21 @@ export const NavContainer = styled.ul`
     width: 90%;
     margin: 0 2vw;
   }
+  @media (max-width: 600px) {
+    display: none;
+  }
 `;
-export const NavElement = styled.li``;
+export const NavElement = styled.li`
+  height: 100%;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  &:hover {
+    border-bottom: ${({ theme }) => theme.colors.primary.orange} 3px solid;
+    margin-bottom: -3px;
+    color: #222;
+  }
+`;
 
 export const IconsContainer = styled.div`
   display: flex;
@@ -51,8 +73,75 @@ export const Icon = styled.img`
   height: 45%;
   width: 100%;
   min-width: 55px;
+  cursor: pointer;
   &:nth-child(1) {
     height: 20%;
     min-width: 25px;
   }
+  @media (max-width: 600px) {
+    width: 1.5rem;
+    height: 1.5rem;
+    &:nth-child(1) {
+      height: inherit;
+      min-width: inherit;
+    }
+  }
+`;
+
+export const MenuContainer = styled.div`
+  display: grid;
+  place-items: center;
+  /* background-color: ${({ active }) => (active ? "red" : "black")}; */
+  @media (min-width: 600px) {
+    display: none;
+  }
+  & > svg {
+    cursor: pointer;
+  }
+`;
+
+const slideIn = keyframes`
+  from {
+    transform: translateX(-60vw);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+`;
+
+const slideOut = keyframes`
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-60vw);
+  }
+`;
+
+export const MobileContainer = styled.div`
+  position: absolute;
+  width: 60vw;
+  height: 100vh;
+  background-color: white;
+  z-index: 999;
+  animation: ${({ active }) => (active ? slideIn : slideOut)} 0.3s ease-in-out;
+`;
+export const MobileFlex = styled.div`
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin: 5vw 5vw;
+`;
+
+export const MobileMenu = styled.ul`
+  list-style-type: none;
+  margin-top: 5vh;
+  color: #111;
+  font-weight: bold;
+`;
+export const MobileMenuElement = styled.li`
+  margin-top: 2vh;
+  cursor: pointer;
 `;

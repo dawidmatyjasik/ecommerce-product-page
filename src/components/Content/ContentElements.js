@@ -6,12 +6,19 @@ export const ContentContainer = styled.div`
   display: grid;
   grid-template-columns: 2fr 3fr;
   grid-template-rows: 1fr;
+  @media (max-width: 600px) {
+    grid-template-columns: 1fr;
+    grid-template-rows: 45vh calc(100vh - 12vh - 45vh);
+  }
 `;
 
 export const GalleryContainer = styled.div`
   width: 100%;
-  height: 100%;
+  height: 45vh;
   padding: 5vw 3vw;
+  @media (max-width: 600px) {
+    padding: 0;
+  }
   /*  & img {
     border-radius: 10px;
   } */
@@ -26,12 +33,16 @@ export const DescriptionContainer = styled.div`
   padding: calc(5vw) 3vw;
   width: 80%;
   height: 80%;
-
+  @media (max-width: 1050px) {
+    width: 100%;
+  }
   @media (max-width: 768px) {
     height: 60%;
   }
-  @media (max-width: 1050px) {
-    width: 100%;
+  @media (max-width: 600px) {
+    height: 100%;
+    padding: calc(3vw) 3vw;
+    grid-template-rows: 1fr 3fr 3fr 1fr 1fr;
   }
 `;
 
@@ -42,12 +53,18 @@ export const DescCompany = styled.h2`
   @media (max-width: 768px) {
     font-size: 0.9rem;
   }
+  @media (max-width: 600px) {
+    font-size: 0.8rem;
+  }
 `;
 export const DescTitle = styled.h1`
   font-weight: bold;
   font-size: 3rem;
   @media (max-width: 768px) {
     font-size: 2rem;
+  }
+  @media (max-width: 600px) {
+    font-size: 1.7rem;
   }
 `;
 export const DescInfo = styled.p`
@@ -57,6 +74,9 @@ export const DescInfo = styled.p`
   @media (max-width: 768px) {
     font-size: 0.9rem;
   }
+  @media (max-width: 600px) {
+    font-size: 0.8rem;
+  }
 `;
 export const DescPrice = styled.h2`
   font-weight: bold;
@@ -65,6 +85,9 @@ export const DescPrice = styled.h2`
   align-items: center;
   @media (max-width: 768px) {
     font-size: 1.5rem;
+  }
+  @media (max-width: 600px) {
+    font-size: 1.3rem;
   }
 `;
 
@@ -86,6 +109,9 @@ export const DescSell = styled.h4`
   @media (max-width: 768px) {
     font-size: 0.9rem;
   }
+  @media (max-width: 600px) {
+    font-size: 1.3rem;
+  }
 `;
 export const MenuContainer = styled.div`
   height: 100%;
@@ -93,6 +119,12 @@ export const MenuContainer = styled.div`
   display: grid;
   grid-template-columns: 2fr 3fr;
   grid-template-rows: 1fr;
+  @media (max-width: 600px) {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 2vw;
+    margin-bottom: -5px;
+  }
 `;
 export const MenuCounter = styled.div`
   display: grid;
@@ -130,6 +162,9 @@ export const MenuCart = styled.button`
   border-radius: 10px;
   & svg {
     color: white;
+  }
+  @media (max-width: 600px) {
+    margin-left: 0;
   }
 `;
 export const MenuCartSpan = styled.span`
