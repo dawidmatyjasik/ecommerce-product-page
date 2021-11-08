@@ -49,7 +49,20 @@ export const NavContainer = styled.ul`
     display: none;
   }
 `;
-export const NavElement = styled.li``;
+export const NavElement = styled.li`
+  height: 100%;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  /* transition: 0.3s linear; */
+  &:hover {
+    border-bottom: ${({ theme }) => theme.colors.primary.orange} 3px solid;
+    margin-bottom: -3px;
+
+    color: #222;
+    /* padding-bottom: -3px; */
+  }
+`;
 
 export const IconsContainer = styled.div`
   display: flex;
