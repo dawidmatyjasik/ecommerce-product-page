@@ -9,9 +9,14 @@ import {
 } from "../../ContentElements";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import { useState } from "react";
+import { useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
+import { selectCount } from "../../../../features/counterSlice";
 
 const Menu = () => {
   const [amount, setAmount] = useState(0);
+  const count = useSelector(selectCount);
+  const dispatch = useDispatch();
 
   const handleSubstract = () => {
     if (amount > 0) {
