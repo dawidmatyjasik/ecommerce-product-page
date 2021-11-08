@@ -5,10 +5,10 @@ import Menu from "./Menu/Menu";
 import Nav from "./Nav/Nav";
 import Title from "./Title/Title";
 
-const Header = () => {
+const Header = ({ active, setActive }) => {
   return (
     <HeaderContainer>
-      <Menu />
+      <Menu active={active} setActive={setActive} />
 
       <Title />
       <Nav />

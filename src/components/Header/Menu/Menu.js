@@ -1,11 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import { MenuContainer } from "../HeaderElements";
 import MenuIcon from "@mui/icons-material/Menu";
 
-const Menu = () => {
+const Menu = ({ active, setActive }) => {
   return (
-    <MenuContainer>
-      <MenuIcon />
+    <MenuContainer active={active}>
+      <MenuIcon onClick={() => setActive(!active)} />
     </MenuContainer>
   );
 };

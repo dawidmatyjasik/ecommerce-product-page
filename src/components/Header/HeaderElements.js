@@ -25,6 +25,7 @@ export const HeaderTitle = styled.img`
   width: 100%;
   min-width: 100px;
   object-fit: contain;
+  cursor: pointer;
   @media (max-width: 600px) {
     width: 50%;
   }
@@ -54,13 +55,10 @@ export const NavElement = styled.li`
   display: grid;
   place-items: center;
   cursor: pointer;
-  /* transition: 0.3s linear; */
   &:hover {
     border-bottom: ${({ theme }) => theme.colors.primary.orange} 3px solid;
     margin-bottom: -3px;
-
     color: #222;
-    /* padding-bottom: -3px; */
   }
 `;
 
@@ -75,6 +73,7 @@ export const Icon = styled.img`
   height: 45%;
   width: 100%;
   min-width: 55px;
+  cursor: pointer;
   &:nth-child(1) {
     height: 20%;
     min-width: 25px;
@@ -92,7 +91,36 @@ export const Icon = styled.img`
 export const MenuContainer = styled.div`
   display: grid;
   place-items: center;
+  /* background-color: ${({ active }) => (active ? "red" : "black")}; */
   @media (min-width: 600px) {
     display: none;
   }
+  & > svg {
+    cursor: pointer;
+  }
+`;
+
+export const MobileContainer = styled.div`
+  position: absolute;
+  width: 60vw;
+  height: 100vh;
+  background-color: white;
+  z-index: 999;
+`;
+export const MobileFlex = styled.div`
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin: 5vw 5vw;
+`;
+
+export const MobileMenu = styled.ul`
+  list-style-type: none;
+  margin-top: 5vh;
+  color: #111;
+  font-weight: bold;
+`;
+export const MobileMenuElement = styled.li`
+  margin-top: 2vh;
+  cursor: pointer;
 `;
