@@ -9,7 +9,7 @@ import CloseIcon from "@mui/icons-material/Close";
 
 const Mobile = ({ active, setActive }) => {
   return (
-    <MobileContainer>
+    <MobileContainer active={active}>
       <MobileFlex>
         <CloseIcon
           style={{ color: "#444", cursor: "pointer" }}

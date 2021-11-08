@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 
 export const HeaderContainer = styled.div`
   height: 100%;
@@ -100,12 +100,33 @@ export const MenuContainer = styled.div`
   }
 `;
 
+const slideIn = keyframes`
+  from {
+    transform: translateX(-60vw);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+`;
+
+const slideOut = keyframes`
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-60vw);
+  }
+`;
+
 export const MobileContainer = styled.div`
   position: absolute;
   width: 60vw;
   height: 100vh;
   background-color: white;
   z-index: 999;
+  animation: ${({ active }) => (active ? slideIn : slideOut)} 0.3s ease-in-out;
 `;
 export const MobileFlex = styled.div`
   position: relative;
