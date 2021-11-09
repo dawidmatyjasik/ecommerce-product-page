@@ -67,6 +67,40 @@ export const IconsContainer = styled.div`
   justify-content: space-evenly;
   align-items: center;
 `;
+export const ShopingCartContainer = styled.div`
+  position: relative;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 60%;
+`;
+
+export const ShopingCartItems = styled.div`
+  width: 25px;
+  height: 17.5px;
+  background-color: ${({ theme }) => theme.colors.primary.orange};
+  border-radius: 15px;
+  position: absolute;
+  top: 20%;
+  right: 10%;
+  @media (max-width: 600px) {
+    width: 20px;
+    height: 15px;
+    top: -20%;
+  }
+`;
+export const ShopingCartSpan = styled.span`
+  height: 100%;
+  width: 100%;
+  display: grid;
+  place-items: center;
+  font-size: 0.75rem;
+  /* position: relative; */
+  /* top: 50%; */
+  /* left: auto; */
+  /* transform: translate(-50%, -50%); */
+  color: white;
+`;
 
 export const Icon = styled.img`
   object-fit: contain;
