@@ -126,7 +126,7 @@ export const MenuContainer = styled.div`
   display: grid;
   place-items: center;
   /* background-color: ${({ active }) => (active ? "red" : "black")}; */
-  @media (min-width: 600px) {
+  @media (min-width: 601px) {
     display: none;
   }
   & > svg {

@@ -208,6 +208,14 @@ export const CartContainer = styled.div`
   background-color: white;
   padding: 0.75rem;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  @media (max-width: 600px) {
+    top: 0;
+    left: 0;
+    width: calc(100vw - 2rem);
+    max-width: none;
+    height: calc(35vh - 2rem);
+    margin: 1rem 1rem;
+  }
 `;
 export const CartHeader = styled.div`
   font-size: 1rem;
