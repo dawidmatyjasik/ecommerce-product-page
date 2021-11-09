@@ -6,6 +6,7 @@ export const ContentContainer = styled.div`
   display: grid;
   grid-template-columns: 2fr 3fr;
   grid-template-rows: 1fr;
+  position: relative;
   @media (max-width: 600px) {
     grid-template-columns: 1fr;
     grid-template-rows: 35vh calc(100vh - 12vh - 35vh);
@@ -188,4 +189,65 @@ export const Icon = styled.img`
   fill: white;
   /* height: 50%; */
   /* width: 50%; */
+`;
+
+export const CartContainer = styled.div`
+  position: absolute;
+  top: -2%;
+  right: 0;
+  width: 30vw;
+  height: 20vh;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 2fr 3fr 3fr;
+  gap: 10px;
+  border-radius: 10px;
+  max-width: 450px;
+  min-width: 350px;
+  z-index: 999999;
+  background-color: white;
+  padding: 0.75rem;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+`;
+export const CartHeader = styled.div`
+  font-size: 1rem;
+  font-weight: bold;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+`;
+export const CartItem = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-height: 80px;
+`;
+export const CartItemImg = styled.img`
+  object-fit: contain;
+  border-radius: 10px;
+  max-height: 60px;
+`;
+export const CartItemDescription = styled.div`
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+`;
+export const CartItemHeader = styled.h2`
+  font-size: 1rem;
+  color: ${({ theme }) => theme.colors.neutral.darkGrayishBlue};
+  font-weight: 400;
+  /* text-align: center; */
+`;
+export const CartItemDetails = styled.h3`
+  font-size: 1rem;
+  color: ${({ theme }) => theme.colors.neutral.darkGrayishBlue};
+  font-weight: 400;
+`;
+export const CartCheckout = styled.div`
+  height: 100%;
+  width: 100%;
+  background-color: ${({ theme }) => theme.colors.primary.orange};
+  border-radius: 10px;
+  display: grid;
+  place-items: center;
+  color: white;
+  font-weight: bold;
 `;
