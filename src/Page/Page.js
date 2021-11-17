@@ -6,6 +6,7 @@ import { PageBackground, PageContainer } from "./PageElements";
 
 const Page = () => {
   const [active, setActive] = useState(false);
+  const [cartStatus, setCartStatus] = useState(false);
   return (
     <>
       {active ? <Mobile active={active} setActive={setActive} /> : <></>}
@@ -13,14 +14,24 @@ const Page = () => {
       {active ? (
         <PageBackground>
           <PageContainer>
-            <Header active={active} setActive={setActive} />
+            <Header
+              active={active}
+              setActive={setActive}
+              cartStatus={cartStatus}
+              setCartStatus={setCartStatus}
+            />
             <Content />
           </PageContainer>
         </PageBackground>
       ) : (
         <PageContainer>
-          <Header active={active} setActive={setActive} />
-          <Content />
+          <Header
+            active={active}
+            setActive={setActive}
+            cartStatus={cartStatus}
+            setCartStatus={setCartStatus}
+          />
+          <Content cartStatus={cartStatus} />
         </PageContainer>
       )}
     </>

@@ -12,9 +12,9 @@ import {
 import DeleteIcon from "@mui/icons-material/Delete";
 import img1 from "../../../images/image-product-1.jpg";
 
-const Cart = () => {
+const Cart = ({ cartStatus }) => {
   return (
-    <CartContainer>
+    <CartContainer active={cartStatus}>
       <CartHeader>Cart</CartHeader>
       <CartItem>
         <CartItemImg src={img1} />

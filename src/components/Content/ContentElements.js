@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 
 export const ContentContainer = styled.div`
   height: 100%;
@@ -191,9 +191,30 @@ export const Icon = styled.img`
   /* width: 50%; */
 `;
 
+const showIn = keyframes`
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+`;
+
+const showOut = keyframes`
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+`;
+
 export const CartContainer = styled.div`
+  animation: ${({ active }) => (active ? showIn : showOut)} 0.5s ease-in-out;
   position: absolute;
-  top: -2%;
+  top: -1%;
   right: 0;
   width: 30vw;
   height: 20vh;

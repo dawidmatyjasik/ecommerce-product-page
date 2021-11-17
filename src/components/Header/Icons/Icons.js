@@ -9,14 +9,14 @@ import {
 import Avatar from "../../../images/image-avatar.png";
 import Cart from "../../../images/icon-cart.svg";
 
-const Icons = () => {
+const Icons = ({ cartStatus, setCartStatus }) => {
   return (
     <IconsContainer>
       <ShopingCartContainer>
         <ShopingCartItems>
           <ShopingCartSpan>1</ShopingCartSpan>
         </ShopingCartItems>
-        <Icon src={Cart} />
+        <Icon src={Cart} onClick={() => setCartStatus(!cartStatus)} />
       </ShopingCartContainer>
 
       <Icon src={Avatar} />
