@@ -25,7 +25,7 @@ const Cart = ({ cartStatus }) => {
             <span style={{ color: "black", fontWeight: "700" }}>$375.00</span>
           </CartItemDetails>
         </CartItemDescription>
-        <DeleteIcon style={{ color: "rgba(0,0,0,0.3)" }} />
+        <DeleteIcon style={{ color: "rgba(0,0,0,0.3)", cursor: "pointer" }} />
       </CartItem>
       <CartCheckout>Checkout</CartCheckout>
     </CartContainer>

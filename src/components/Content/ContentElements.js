@@ -279,4 +279,5 @@ export const CartCheckout = styled.div`
   place-items: center;
   color: white;
   font-weight: bold;
+  cursor: pointer;
 `;

@@ -3,7 +3,7 @@ import styled, { keyframes } from "styled-components";
 export const HeaderContainer = styled.div`
   height: 100%;
   width: 100%;
-  min-height: 11.5vh;
+  /* min-height: 11.5vh; */
   display: grid;
   grid-template-columns: 4fr 16fr 3fr;
   grid-template-rows: 1fr;
