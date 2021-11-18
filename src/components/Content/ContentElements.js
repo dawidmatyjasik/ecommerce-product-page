@@ -220,7 +220,7 @@ export const CartContainer = styled.div`
   height: 20vh;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 2fr 3fr 3fr;
+  grid-template-rows: 2fr 6fr;
   gap: 10px;
   border-radius: 10px;
   max-width: 450px;
@@ -237,6 +237,11 @@ export const CartContainer = styled.div`
     height: calc(35vh - 2rem);
     margin: 1rem 1rem;
   }
+`;
+export const CartGrid = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 `;
 export const CartHeader = styled.div`
   font-size: 1rem;
@@ -271,13 +276,19 @@ export const CartItemDetails = styled.h3`
   font-weight: 400;
 `;
 export const CartCheckout = styled.div`
-  height: 100%;
-  width: 100%;
   background-color: ${({ theme }) => theme.colors.primary.orange};
   border-radius: 10px;
+  height: 35%;
   display: grid;
   place-items: center;
   color: white;
   font-weight: bold;
   cursor: pointer;
+`;
+
+export const CartEmpty = styled.div`
+  display: grid;
+  place-items: center;
+  color: ${({ theme }) => theme.colors.neutral.darkGrayishBlue};
+  font-weight: 700;
 `;

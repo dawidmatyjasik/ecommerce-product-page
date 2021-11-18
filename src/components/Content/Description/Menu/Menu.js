@@ -11,7 +11,10 @@ import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import { useState } from "react";
 import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
-import { selectCount } from "../../../../features/counterSlice";
+import {
+  incrementByAmount,
+  selectCount,
+} from "../../../../features/counterSlice";
 
 const Menu = () => {
   const [amount, setAmount] = useState(0);
@@ -23,6 +26,12 @@ const Menu = () => {
       setAmount(amount - 1);
     }
   };
+
+  const handleCartAdd = () => {
+    dispatch(incrementByAmount(amount));
+    setAmount(0);
+  };
+
   return (
     <MenuContainer>
       <MenuCounter>
@@ -30,7 +39,7 @@ const Menu = () => {
         <MenuSpan>{amount}</MenuSpan>
         <MenuButton onClick={() => setAmount(amount + 1)}>+</MenuButton>
       </MenuCounter>
-      <MenuCart>
+      <MenuCart onClick={handleCartAdd}>
         <ShoppingCartIcon />
         <MenuCartSpan>Add to cart</MenuCartSpan>
       </MenuCart>
